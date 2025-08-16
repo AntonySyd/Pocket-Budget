@@ -208,18 +208,34 @@
   </section>
 
   <!-- ===== App (unchanged) ===== -->
-  <section id="app">
-    <header class="app-header">
-      <h1>PocketBudget</h1>
-      <nav class="tabs" aria-label="Primary">
-        <button class="tab is-active" data-view="transactions">Transactions</button>
-        <button class="tab" data-view="budgets">Budgets</button>
-        <button class="tab" data-view="goals">Goals</button>
-        <button class="tab" data-view="settings">Settings</button>
-      </nav>
-    </header>
+<section id="app">
+  <div class="container app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="side-brand">
+        <span class="brand-mark">PB</span>
+        <span class="brand-name">PocketBudget</span>
+      </div>
 
-    <main id="view-root" class="container">
+      <nav class="side-nav" aria-label="Primary">
+        <button class="tab is-active" data-view="transactions">
+          <span class="i">💳</span><span>Transactions</span>
+        </button>
+        <button class="tab" data-view="budgets">
+          <span class="i">📊</span><span>Budgets</span>
+        </button>
+        <button class="tab" data-view="goals">
+          <span class="i">🎯</span><span>Goals</span>
+        </button>
+        <button class="tab" data-view="settings">
+          <span class="i">⚙️</span><span>Settings</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Content -->
+    <main id="view-root" class="content">
+      <!-- Transactions View -->
       <section class="view view-transactions is-active" data-view="transactions">
         <form id="tx-form" class="card">
           <h2>Add Transaction</h2>
@@ -246,6 +262,7 @@
         </div>
       </section>
 
+      <!-- Budgets View -->
       <section class="view view-budgets" data-view="budgets">
         <div class="card">
           <h2>Budgets (this month)</h2>
@@ -253,6 +270,7 @@
         </div>
       </section>
 
+      <!-- Goals View -->
       <section class="view view-goals" data-view="goals">
         <form id="goal-form" class="card">
           <h2>New Goal</h2>
@@ -273,6 +291,7 @@
         </div>
       </section>
 
+      <!-- Settings View -->
       <section class="view view-settings" data-view="settings">
         <div class="card">
           <h2>Settings</h2>
@@ -303,7 +322,9 @@
         </div>
       </section>
     </main>
-  </section>
+  </div>
+</section>
+
 
   <footer class="site-footer">
     <div class="container foot">
